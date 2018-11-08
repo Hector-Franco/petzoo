@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!--Bienvenido Card-->
+  <ion-card>
+    <img src="../../assets/imgs/dog-petzoo.jpg" width="500" />
+    <ion-card-content>
+      <ion-card-title>
+        Bienvenido a Petzoo
+      </ion-card-title>
+      <p>
+        Ayuda a los animales de tu zona a encontrar un buen lugar para vivir, ya sea por medio de la adopción
+        o por la ayuda ciudadana para evitar el flagelo del maltrato animal.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!--Pages Cards-->
+  <ion-card *ngFor="let card of cards">
+    <img [src]="card.imagen" width="500" />
+    <ion-card-content>
+      <ion-card-title>
+        {{card.titulo}}
+      </ion-card-title>
+      <p>
+        {{card.contenido}}
+      </p> 
+    </ion-card-content>
+    <button ion-button  clear item-end [color]="card.color" (click)="goToPage(card.pagina)">{{card.boton}}</button>
+  </ion-card>
+
+
+</ion-content>

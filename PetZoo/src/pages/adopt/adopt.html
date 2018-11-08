@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar color="cyan">
+
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Adoptar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header color="cyan">
+      Adopta un amigo
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        ¿Deseas adoptar un amigo para toda tu vida? <b>GENIAL.</b><br>
+        Sabemos que quieres ver qué animalito está disponible en este momento pero primero
+        necesitamos verificar que seas una persona responsable y que tienes la capacidad para hacerte cargo de un ser
+        vivo a parte de ti.<br>
+        Recuerda los animales son seres vivientes que necesitan de mucho cuidado, no un juguete de medio tiempo.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header color="cyan">
+      Formulario de verificación de aceptación
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        Te pedimos que por favor rellenes todos los campos solicitados abajo para verificar que eres una persona
+        acta para adoptar un animalito.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-list>
+
+    <p>Entra tu nombre completo. Tal cual aparece en el documento de identidad</p>
+    <ion-item>
+      <ion-input placeholder="Nombre completo"></ion-input>
+    </ion-item>
+     
+    <p>Número de documento de identidad</p>
+    <ion-item>
+      <ion-input type="number" placeholder="Documento de identidad"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list radio-group [(ngModel)]="relationship">
+    <p>Ahora necesitamos saber como vives</p>
+    <ion-item>
+      <ion-label>Solo</ion-label>
+      <ion-radio value="solo" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>En familia</ion-label>
+      <ion-radio value="familia"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pareja</ion-label>
+      <ion-radio value="pareja" ></ion-radio>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Otro</ion-label>
+        <ion-radio value="otro" ></ion-radio>
+       
+      </ion-item>
+      <ion-input placeholder="Cual?"></ion-input>
+  </ion-list>
+
+
+  <button  ion-button color="cyan" (click)="goToList()"> Enviar</button>
+
+
+</ion-content>

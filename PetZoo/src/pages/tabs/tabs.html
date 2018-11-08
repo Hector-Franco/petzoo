@@ -1,0 +1,7 @@
+<ion-tabs [color]="color" [selectedIndex]="myIndex">
+  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home" (ionSelect)="selectHome()"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Adopt" tabIcon="bookmark" (ionSelect)="selectAdopt()"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Report" tabIcon="camera" (ionSelect)="selectReport()"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Refuges" tabIcon="apps" (ionSelect)="selectRefuges()"></ion-tab>
+  <ion-tab [root]="tab5Root" tabTitle="Profile" tabIcon="person" (ionSelect)="selectProfile()"></ion-tab>
+</ion-tabs>

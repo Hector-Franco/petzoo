@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Report
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <!--Tarjeta de información-->
+  <ion-card>
+    <ion-card-header color="danger">
+      Reporta un caso de abuso
+    </ion-card-header>
+    <ion-card-content>
+      Por favor ingresa la información necesaria en la parte inferior para enviar el reporte a la base de datos.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab bottom center>
+    <button ion-fab color="danger" (click)="takePicture()">
+      <ion-icon class="tam" name="camera"></ion-icon>
+    </button>
+  </ion-fab>
+
+
+</ion-content>

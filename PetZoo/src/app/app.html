@@ -1,0 +1,32 @@
+<ion-menu [content]="content">
+
+    <ion-header >
+        <ion-toolbar >
+            <ion-title>PetZoo</ion-title>
+          </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <img src="../assets/imgs/logo-petzoo.png" alt="" style="padding-left: 4em">
+
+        <ion-list no-lines>
+
+            <button ion-item  *ngFor="let page of paginas" (click)="goToPage(page.page)" menuClose>
+                <ion-icon [name]="page.icon" [color] = "page.color"></ion-icon>
+                {{page.nombre}}
+            </button>
+
+            <ion-list-header>
+                Ajustes
+            </ion-list-header>
+            
+            <button ion-item *ngFor="let page of ajustes" (click)="goToPage(page.page)" menuClose>
+                <ion-icon [name]="page.icon" ></ion-icon>
+                {{page.nombre}}
+            </button>
+
+
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>

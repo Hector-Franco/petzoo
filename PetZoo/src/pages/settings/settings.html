@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Configuración
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list >
+
+    <ion-list-header>
+      Nada
+    </ion-list-header>
+    <button ion-item *ngFor="let item of opciones">
+      <ion-icon [name]="item.icono" item-start></ion-icon>
+      {{item.nombre}}
+      <ion-icon name="arrow-dropright" item-end></ion-icon>
+    </button>
+
+    </ion-list>
+
+</ion-content>
